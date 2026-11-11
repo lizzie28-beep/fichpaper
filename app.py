@@ -69,7 +69,7 @@ def fichar_paper(client, titulo, abstract):
     user_content = f"Título: {titulo}\n\nAbstract: {abstract}"
     response = client.chat.completions.create(
         model=MODEL,
-        max_tokens=1024,
+        max_tokens=400,
         messages=[
             {"role": "system", "content": SYSTEM_PROMPT},
             {"role": "user", "content": user_content},
